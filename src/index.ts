@@ -74,7 +74,7 @@ export function apply(ctx: Context, config: Config) {
 
   if (config.command.enabled) {
     ctx
-      .command('nlg <text>', '生成应答文本', { authority: 2 })
+      .command('nlg <text:text>', '生成应答文本', { authority: 2 })
       .action(async (_, text) => {
         const candidates = await ctx.rasanlg.generateCandidates(text)
 
