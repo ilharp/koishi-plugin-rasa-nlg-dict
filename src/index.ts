@@ -35,9 +35,12 @@ class RasaNLG extends Service {
   constructor(ctx: Context, config: Config) {
     super(ctx, 'rasanlg', true)
     this.#config = config
+    this.dictionary = config.dictionary
   }
 
   #config: Config
+
+  dictionary: Record<string, string>
 
   async generate(text: string): Promise<string | undefined> {
     const nluData = await this.ctx.rasanlu.parse(text)
