@@ -32,7 +32,8 @@
     "rasa"
   ],
   "devDependencies": {
-    "atsc": "^1.2.2"
+    "atsc": "^1.2.2",
+    "typescript": "^4.9.4"
   },
   "peerDependencies": {
     "koishi": "^4.10.5"
