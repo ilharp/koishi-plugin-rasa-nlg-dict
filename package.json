@@ -1,0 +1,57 @@
+{
+  "name": "koishi-plugin-rasa-nlg-dict",
+  "description": "Dictionary-based Natural Language Generation (NLG) ability for Koishi.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Il Harper",
+    "email": "afanyiyu@hotmail.com",
+    "url": "https://ilharper.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ilharp/koishi-plugin-rasa-nlg-dict",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilharp/koishi-plugin-rasa-nlg-dict.git"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "build": "atsc -b"
+  },
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "nlu",
+    "nlp",
+    "nlg",
+    "rasa"
+  ],
+  "devDependencies": {
+    "atsc": "^1.2.2"
+  },
+  "peerDependencies": {
+    "koishi": "^4.10.5"
+  },
+  "koishi": {
+    "description": {
+      "en": "Dictionary-based Natural Language Generation (NLG) ability for Koishi.",
+      "zh": "Koishi 基于字典的自然语言生成（NLG）能力。"
+    },
+    "service": {
+      "required": [
+        "rasanlu"
+      ],
+      "implements": [
+        "rasanlg"
+      ]
+    },
+    "locales": [
+      "zh"
+    ]
+  }
+}
